@@ -4,7 +4,7 @@ Repository created for sotring Kaffa Mobile's Java Developer exam questions.
 
 ## Instructions
 
-### The questions 1, 2, 3, 4 and 7 can be run with any Java IDE since they're all CLI like apps.
+### Questions 1, 2, 3, 4 and 7 can be run with any Java IDE since they're all CLI like apps.
 
 ## Question 1 - Validate CNPJ format (mask)
 The answer for this question was written as a CLI Java program. When the code is run, it checks if the received String looks like a CNPJ by its lenght and if it is convertible to Long, since a CNPJ contains only numbers.
