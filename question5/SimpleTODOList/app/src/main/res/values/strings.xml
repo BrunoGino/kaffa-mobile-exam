@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Simple TODO List</string>
+    <string name="todolist">Todo List</string>
+    <string name="title">Title</string>
+    <string name="insert_your_text">Insert your text here</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="could_not_fetch_tasks">Could not fetch any task</string>
+    <string name="deleted">Task deleted</string>
+</resources>

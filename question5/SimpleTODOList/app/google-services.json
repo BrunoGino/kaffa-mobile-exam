@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "228456691089",
+    "firebase_url": "https://hello-home-45251.firebaseio.com",
+    "project_id": "hello-home-45251",
+    "storage_bucket": "hello-home-45251.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:228456691089:android:fcd984c8ac201c6e995630",
+        "android_client_info": {
+          "package_name": "br.com.simpletodolist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "228456691089-38sae4nl1s7rc84c65pvtngmtler0ji8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.simpletodolist",
+            "certificate_hash": "46a91134a471e7d7438bb28c9affd9bf7de13086"
+          }
+        },
+        {
+          "client_id": "228456691089-0sp7fqdl6ei5p8hi8am1dan9imce7n2s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBL8tCh5NsVKPh8UWXs83KNuFH4l7jFk2I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "228456691089-0sp7fqdl6ei5p8hi8am1dan9imce7n2s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
