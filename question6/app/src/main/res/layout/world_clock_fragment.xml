@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="java.time.format.TextStyle" />
+
+        <import type="java.util.Locale" />
+
+        <variable
+            name="hourFormatter"
+            type="java.time.format.DateTimeFormatter" />
+
+        <variable
+            name="dateFormatter"
+            type="java.time.format.DateTimeFormatter" />
+
+        <variable
+            name="zonedDateTime"
+            type="java.time.ZonedDateTime" />
+
+        <variable
+            name="clock"
+            type="br.com.question6.model.WorldClock" />
+
+        <variable
+            name="localDayOfWeekValue"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/currentDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/current_date"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/utcFormat" />
+
+        <TextView
+            android:id="@+id/utcFormat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/utc"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/currentDateValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@{dateFormatter.format(clock.getCurrentDateTimeAsObject)}"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/currentDate"
+            app:layout_constraintStart_toEndOf="@+id/currentDate"
+            tools:text="09/06/2020" />
+
+        <TextView
+            android:id="@+id/currentHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/current_hour"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/currentDate"
+            app:layout_constraintTop_toBottomOf="@+id/currentDate" />
+
+        <TextView
+            android:id="@+id/timezone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/timezone"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/currentHour"
+            app:layout_constraintStart_toEndOf="@+id/currentHourValue" />
+
+        <TextView
+            android:id="@+id/timezoneValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@{clock.timeZoneName}"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/timezone"
+            app:layout_constraintStart_toEndOf="@+id/timezone" />
+
+        <TextView
+            android:id="@+id/dayOfWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/current_day_of_week"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/currentHour"
+            app:layout_constraintTop_toBottomOf="@+id/currentHour" />
+
+        <TextView
+            android:id="@+id/dayOfWeekValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@{clock.dayOfTheWeek}"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/dayOfWeek"
+            app:layout_constraintStart_toEndOf="@+id/dayOfWeek" />
+
+        <TextView
+            android:id="@+id/currentHourValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@{hourFormatter.format(clock.getCurrentDateTimeAsObject())}"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/currentHour"
+            app:layout_constraintStart_toEndOf="@+id/currentHour" />
+
+        <TextView
+            android:id="@+id/currentDateLocal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/current_date"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/localFormat" />
+
+        <TextView
+            android:id="@+id/localFormat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/local"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dayOfWeek" />
+
+        <TextView
+            android:id="@+id/currentDateValueLocal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@{dateFormatter.format(zonedDateTime)}"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/currentDateLocal"
+            app:layout_constraintStart_toEndOf="@+id/currentDateLocal"
+            tools:text="09/06/2020" />
+
+        <TextView
+            android:id="@+id/currentHourLocal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/current_hour"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/currentDateLocal"
+            app:layout_constraintTop_toBottomOf="@+id/currentDateLocal" />
+
+        <TextView
+            android:id="@+id/timezoneLocal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/timezone"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/currentHourLocal"
+            app:layout_constraintStart_toEndOf="@+id/currentHourValueLocal" />
+
+        <TextView
+            android:id="@+id/timezoneValueLocal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@{zonedDateTime.zone.getDisplayName(TextStyle.SHORT, Locale.getDefault())}"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/timezoneLocal"
+            app:layout_constraintStart_toEndOf="@+id/timezoneLocal" />
+
+        <TextView
+            android:id="@+id/dayOfWeekLocal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/current_day_of_week"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/currentHourLocal"
+            app:layout_constraintTop_toBottomOf="@+id/currentHourLocal" />
+
+        <TextView
+            android:id="@+id/dayOfWeekValueLocal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@{localDayOfWeekValue}"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/dayOfWeekLocal"
+            app:layout_constraintStart_toEndOf="@+id/dayOfWeekLocal" />
+
+        <TextView
+            android:id="@+id/currentHourValueLocal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@{hourFormatter.format(zonedDateTime)}"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/currentHourLocal"
+            app:layout_constraintStart_toEndOf="@+id/currentHourLocal" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

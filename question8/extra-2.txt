@@ -1,0 +1,4 @@
+The indexes that should be created are:
+* ID (Client) - To identify a client uniquely;
+* ID (Product) - To identify a product uniquely;
+* ID (Orders) - To identify a order uniquely.

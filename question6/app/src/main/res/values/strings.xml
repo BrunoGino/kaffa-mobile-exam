@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">World Clock</string>
+    <string name="current_date">Current date</string>
+    <string name="current_hour">Current hour</string>
+    <string name="current_day_of_week">Day of week</string>
+    <string name="world_clock">World Clock</string>
+    <string name="fetch_error">Could not fetch current date/time</string>
+    <string name="timezone">Timezone</string>
+    <string name="utc">UTC</string>
+    <string name="local">Local</string>
+</resources>
