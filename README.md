@@ -28,7 +28,7 @@ The answer for this question is a native Android app built using Android Jetpack
 The Todo List app connects to a Realtime Database on Firebase to store and query data. The main screen is the list of all Tasks and, as a simple CRUD, a user can create a Task with a title and a description, update id, and delete it.
 
 # Question 6 - Rest Client - World Clock
-An Android app was also made for this question. You can run it with your Android Studio or download the app jar into your device and install.
+An Android app was also made for this question. You can run it with your Android Studio or download the APK file into your device and install.
 It is a simple app that uses Android Jetpack components (Databinding, Viewmodel & LiveData and Navigation) and Retrofit to query current timezone in UTC format from the World Clock API. The app also shows current time in local format.
 
 # Question 7 - Rest Server - World Clock
